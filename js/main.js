@@ -219,6 +219,21 @@
   initAccordion(document.querySelector(".panel--hero .slats"), 1);
   initAccordion(document.querySelector(".panel--contact .slats"), 2);
 
+  const copyBtn = document.getElementById("copyEmail");
+  if (copyBtn) {
+    copyBtn.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText("anthonyzenitam@gmail.com");
+        copyBtn.textContent = "Copied!";
+      } catch (err) {
+        copyBtn.textContent = "anthonyzenitam@gmail.com";
+      }
+      setTimeout(() => {
+        copyBtn.textContent = "Copy";
+      }, 1600);
+    });
+  }
+
   const heroPanel = document.querySelector(".panel--hero");
   if (heroPanel) {
     heroPanel.querySelectorAll(".slat").forEach((slat) => {
