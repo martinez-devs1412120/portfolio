@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Anthony Martinez — 3rd-year CS student and web developer. Real projects, solid foundations, AI-assisted workflow.">
+  <title>Anthony Martinez — Student Web Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="loader" id="loader" role="status" aria-label="Loading">
+    <div class="loader-stage">
+      <span class="loader-shadow"></span>
+      <span class="loader-square"></span>
+    </div>
+  </div>
+
+  <div class="frame" id="frame">
+
+    <header class="chrome chrome-top">
+      <a href="#" class="logo" data-goto="0" aria-label="Back to start">AM<span>.</span></a>
+      <div class="status">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span class="mono">Open to work</span>
+      </div>
+    </header>
+
+    <aside class="chrome chrome-left" aria-hidden="true">
+      <span class="edge-label mono">Scroll</span>
+      <span class="edge-line"><span class="edge-line-fill"></span></span>
+    </aside>
+
+    <aside class="chrome chrome-right">
+      <a href="#contact" class="edge-label edge-link mono" data-goto="4">Get in touch</a>
+    </aside>
+
+    <main class="track" id="track" tabindex="0" aria-label="Portfolio sections, scrolls horizontally">
+
+      <section class="panel panel--hero" id="intro" aria-label="Intro">
+        <div class="slats" aria-hidden="true">
+          <span class="slats-hint mono">Hover</span>
+          <div class="slat" data-depth="-0.06">
+            <img class="slat-img" src="images/shot-about.png" alt="" onerror="this.remove()">
+            <span class="card-title-v">About</span>
+          </div>
+          <div class="slat" data-depth="-0.02">
+            <img class="slat-img" src="images/shot-work.png" alt="" onerror="this.remove()">
+            <span class="card-title-v">Work</span>
+          </div>
+          <div class="slat" data-depth="0.04">
+            <img class="slat-img" src="images/shot-skills.png" alt="" onerror="this.remove()">
+            <span class="card-title-v">Skills</span>
+          </div>
+          <div class="slat" data-depth="0.08">
+            <img class="slat-img" src="images/shot-contact.png" alt="" onerror="this.remove()">
+            <span class="card-title-v">Contact</span>
+          </div>
+        </div>
+        <div class="panel-inner">
+          <p class="kicker mono reveal">Portfolio — 2026</p>
+          <div class="title-block">
+            <h1 class="display" data-split>Anthony Martinez</h1>
+            <p class="sub reveal">3rd-year CS student crafting real projects — solid foundations in design, architecture and AI-assisted workflows.</p>
+          </div>
+          <ul class="meta-strip reveal">
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              <span>Web<br>Development</span>
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 19 7-7 3 3-7 7-3-3z"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="m2 2 7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+              <span>UI<br>Engineering</span>
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              <span>Open to<br>Opportunities</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="panel panel--about" id="about" aria-label="About">
+        <div class="panel-inner panel-inner--about">
+          <div class="about-content">
+            <p class="kicker mono reveal">01 — About</p>
+            <h2 class="display display-md" data-split>About</h2>
+            <div class="about-body reveal">
+              <p>I'm Anthony — a 3rd-year CS student who ships. Hand-coded HTML and CSS, a clear read on system architecture, and the right stack for the job: JavaScript, PHP or SQL.</p>
+              <p>I design and decide; AI accelerates the build. Two live projects prove the workflow works — both shipped, both still evolving.</p>
+            </div>
+            <ul class="stats reveal">
+              <li><span class="stat-num">3rd</span><span class="mono">Year CS student</span></li>
+              <li><span class="stat-num">2</span><span class="mono">Projects shipped</span></li>
+              <li><span class="stat-num">5+</span><span class="mono">Technologies</span></li>
+            </ul>
+          </div>
+          <div class="about-photo-wrap reveal">
+            <div class="about-photo">
+              <img class="slat-img" src="images/me.jpg" alt="Portrait of Anthony Martinez">
+            </div>
+          </div>
+        </div>
+        <div class="about-expand" id="aboutExpand" aria-hidden="true">
+          <div class="about-expand-blur">
+            <img src="images/me.jpg" alt="">
+          </div>
+          <div class="about-expand-crisp">
+            <img src="images/me.jpg" alt="">
+          </div>
+          <div class="about-expand-scrim"></div>
+        </div>
+      </section>
+
+      <section class="panel panel--work" id="work" aria-label="Selected work">
+        <div class="panel-inner">
+          <div class="work-intro">
+            <p class="kicker mono reveal">02 — Selected Work</p>
+            <h2 class="display" data-split>Work</h2>
+          </div>
+          <div class="projects-row reveal">
+            <article class="project-card">
+              <img class="card-shot" src="images/kadence.png" alt="" onerror="this.remove()">
+              <div class="card-shade"></div>
+              <span class="card-num mono">01</span>
+              <span class="card-letter" aria-hidden="true">K</span>
+              <span class="card-title-v">Kadence</span>
+              <div class="card-body">
+                <h3>Kadence</h3>
+                <p>My first end-to-end web project — designed, built and shipped solo, and still improving with every version.</p>
+                <div class="card-foot">
+                  <span class="mono">HTML · CSS · JavaScript</span>
+                  <div class="card-links">
+                    <a class="text-link" href="https://github.com/toNixluvsfembys1412120/kadence" target="_blank" rel="noopener" aria-label="Kadence on GitHub">GitHub
+                      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                    <a class="text-link" href="https://tonixluvsfembys1412120.github.io/kadence/" target="_blank" rel="noopener" aria-label="View Kadence live demo">Live demo
+                      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="project-card">
+              <img class="card-shot" src="images/ojt-hunter.png" alt="" onerror="this.remove()">
+              <div class="card-shade"></div>
+              <span class="card-num mono">02</span>
+              <span class="card-letter" aria-hidden="true">O</span>
+              <span class="card-title-v">OJT-Hunter</span>
+              <div class="card-body">
+                <h3>OJT-Hunter</h3>
+                <p>A dashboard that helps students find and track on-the-job training — born from my own OJT experience.</p>
+                <div class="card-foot">
+                  <span class="mono">PHP · MySQL · JavaScript</span>
+                  <div class="card-links">
+                    <a class="text-link" href="https://github.com/toNixluvsfembys1412120/ojt-hunter" target="_blank" rel="noopener" aria-label="OJT-Hunter on GitHub">GitHub
+                      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                    <a class="text-link" href="https://tonixluvsfembys1412120.github.io/ojt-hunter/" target="_blank" rel="noopener" aria-label="View OJT-Hunter live demo">Live demo
+                      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="project-card">
+              <span class="card-num mono">03</span>
+              <span class="card-letter" aria-hidden="true">?</span>
+              <span class="card-title-v">Coming soon</span>
+            </article>
+            <article class="project-card">
+              <span class="card-num mono">04</span>
+              <span class="card-letter" aria-hidden="true">?</span>
+              <span class="card-title-v">Coming soon</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel panel--skills" id="skills" aria-label="Skills">
+        <div class="panel-inner">
+          <p class="kicker mono reveal">03 — Capabilities</p>
+          <h2 class="display display-md" data-split>Skills</h2>
+          <ul class="skills-grid reveal">
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              <h3 class="mono">Frontend</h3>
+              <p>Hand-written HTML &amp; CSS, JavaScript fundamentals.</p>
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+              <h3 class="mono">Architecture</h3>
+              <p>Web app &amp; system design — the right stack for the right problem.</p>
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              <h3 class="mono">Backend &amp; Data</h3>
+              <p>PHP and SQL fundamentals.</p>
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <h3 class="mono">AI Workflow</h3>
+              <p>AI-assisted development with human review and refinement.</p>
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 19 7-7 3 3-7 7-3-3z"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="m2 2 7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+              <h3 class="mono">UI Design</h3>
+              <p>Strong visual sense, sharpened by studying great interfaces.</p>
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+              <h3 class="mono">Networking</h3>
+              <p>Fiber optic splicing &amp; WiFi installation — OJT-trained.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="panel panel--contact" id="contact" aria-label="Contact">
+        <div class="slats">
+          <a class="slat" href="https://github.com/toNixluvsfembys1412120" target="_blank" rel="noopener" data-depth="-0.06" aria-label="GitHub profile">
+            <img class="slat-img" src="images/shot-github.png" alt="" onerror="this.remove()">
+            <span class="card-letter" aria-hidden="true">G</span>
+            <span class="card-title-v">GitHub</span>
+          </a>
+          <a class="slat" href="mailto:anthonyzenitam@gmail.com" data-depth="-0.02" aria-label="Send an email">
+            <img class="slat-img" src="images/shot-email.png" alt="" onerror="this.remove()">
+            <span class="card-letter" aria-hidden="true">@</span>
+            <span class="card-title-v">Email</span>
+          </a>
+          <a class="slat" href="#" target="_blank" rel="noopener" data-depth="0.05" aria-label="LinkedIn profile">
+            <img class="slat-img" src="images/shot-linkedin.png" alt="" onerror="this.remove()">
+            <span class="card-letter" aria-hidden="true">L</span>
+            <span class="card-title-v">LinkedIn</span>
+          </a>
+          <a class="slat" href="#" target="_blank" rel="noopener" data-depth="0.08" aria-label="Facebook profile">
+            <img class="slat-img" src="images/shot-facebook.png" alt="" onerror="this.remove()">
+            <span class="card-letter" aria-hidden="true">F</span>
+            <span class="card-title-v">Facebook</span>
+          </a>
+        </div>
+        <div class="panel-inner">
+          <p class="kicker mono reveal">04 — Contact</p>
+          <div class="title-block">
+            <h2 class="display" data-split>Let's talk</h2>
+            <p class="sub reveal">Have a role, a project, or just want to say hi?</p>
+          </div>
+          <div class="contact-body reveal">
+            <a class="email-link" href="mailto:anthonyzenitam@gmail.com">anthonyzenitam@gmail.com</a>
+            <ul class="socials mono">
+              <li><a href="https://github.com/toNixluvsfembys1412120" target="_blank" rel="noopener">GitHub</a></li>
+              <li><a href="mailto:anthonyzenitam@gmail.com">Email</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="chrome chrome-bottom">
+      <div class="counter mono"><span id="counterCurrent">01</span>&nbsp;/&nbsp;<span id="counterTotal">07</span></div>
+      <nav class="dots" id="dots" aria-label="Section navigation"></nav>
+      <button class="next-btn mono" id="nextBtn" type="button">Next
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </button>
+    </footer>
+
+    <div class="grain" aria-hidden="true"></div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
