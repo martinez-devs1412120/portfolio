@@ -222,6 +222,7 @@
     };
     cards.forEach((card, i) => {
       card.addEventListener("mouseenter", () => setActive(i));
+      card.addEventListener("click", () => setActive(i));
     });
     row.addEventListener("focusin", (e) => {
       const i = cards.findIndex((c) => c.contains(e.target));
