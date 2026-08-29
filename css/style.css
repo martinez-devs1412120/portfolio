@@ -171,8 +171,10 @@ button {
   overflow-x: auto;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
   scrollbar-width: none;
   outline-offset: -4px;
+  -webkit-overflow-scrolling: touch;
 }
 
 .track::-webkit-scrollbar {
@@ -765,7 +767,12 @@ button {
   left: 0;
   right: 0;
   justify-content: space-between;
+  gap: 12px;
   padding: clamp(18px, 2.5vh, 28px) var(--pad-x);
+}
+
+.counter--top {
+  display: none;
 }
 
 .logo {
@@ -1083,11 +1090,19 @@ button {
   }
 
   .chrome-top {
-    padding: 14px 20px;
+    padding: 12px 16px;
+  }
+
+  .chrome-top .counter--top {
+    display: block;
   }
 
   .chrome-bottom {
-    padding: 12px 20px;
+    padding: 10px 16px;
+  }
+
+  .chrome-bottom .counter {
+    display: none;
   }
 
   .chrome-left,

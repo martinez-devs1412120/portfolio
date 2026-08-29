@@ -16,7 +16,10 @@
   let accumulatorTimer = null;
   let ticking = false;
 
+  const counterTotalTop = document.getElementById("counterTotalTop");
+  const counterCurrentTop = document.getElementById("counterCurrentTop");
   counterTotal.textContent = String(panels.length).padStart(2, "0");
+  if (counterTotalTop) counterTotalTop.textContent = String(panels.length).padStart(2, "0");
 
   function splitChars() {
     document.querySelectorAll("[data-split]").forEach((el) => {
@@ -81,6 +84,7 @@
       current = index;
     }
     counterCurrent.textContent = String(current + 1).padStart(2, "0");
+    if (counterCurrentTop) counterCurrentTop.textContent = String(current + 1).padStart(2, "0");
     nextBtn.classList.toggle("is-hidden", current === panels.length - 1);
 
     panels.forEach((panel, i) => {
@@ -109,17 +113,23 @@
   let touchStartX = 0;
   let touchStartY = 0;
   track.addEventListener("touchstart", (e) => {
+    if (e.target.closest(".projects-row, .slats")) return;
     touchStartX = e.touches[0].clientX;
     touchStartY = e.touches[0].clientY;
   }, { passive: true });
   track.addEventListener("touchend", (e) => {
+    if (e.target.closest(".projects-row, .slats")) return;
     const dx = e.changedTouches[0].clientX - touchStartX;
     const dy = e.changedTouches[0].clientY - touchStartY;
-    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) {
+    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 50) {
       if (dx < 0) goTo(current + 1);
       else goTo(current - 1);
     }
   }, { passive: true });
+  document.querySelectorAll(".projects-row, .slats").forEach(el => {
+    el.addEventListener("touchmove", e => e.stopPropagation(), { passive: true });
+    el.addEventListener("touchstart", e => e.stopPropagation(), { passive: true });
+  });
 
   track.addEventListener("scroll", () => {
     if (!ticking) {
