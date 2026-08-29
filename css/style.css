@@ -1143,6 +1143,12 @@ button {
     min-height: 190px;
   }
 
+  .about-photo .slat-img,
+  .about-photo:hover .slat-img {
+    filter: none;
+    transform: none;
+  }
+
   .about-content {
     gap: 0.9rem;
   }

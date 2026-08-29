@@ -238,7 +238,8 @@
       const i = cards.findIndex((c) => c.contains(e.target));
       if (i > -1) setActive(i);
     });
-    setActive(defaultIndex);
+    const isCoarse = window.matchMedia("(hover: none)").matches || window.innerWidth <= 860;
+    if (!isCoarse) setActive(defaultIndex);
   }
 
   initAccordion(document.querySelector(".projects-row"), 0);
